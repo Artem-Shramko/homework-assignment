@@ -1,9 +1,10 @@
-number = 245
+text = "hello"
+shift = 3
 
-a = number // 100
-b = (number // 10) % 10
-c = number % 10
+result = ""
 
-result = a ** 2 + b ** 2 + c ** 2
+for letter in text:
+ new_letter = chr((ord(letter) - ord('a') + shift) % 26 + ord('a'))
+ result += new_letter
 
-print(f"Сума квадратів цифр ({a}^2 + {b}^2 + {c}^2): {result}")
+print(f'Зашифрований текст: "{result}"')
